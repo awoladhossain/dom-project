@@ -2,6 +2,10 @@ function callIt() {
     const myElement = document.body;
     myElement.style.backgroundColor = generateColors();
     const values = document.getElementById("output").value = generateColors();
+    const copy = document.getElementById('copy-id');
+    copy.addEventListener('click', function () {
+        navigator.clipboard.writeText(values)
+    })
 }
 
 function generateColors() {
